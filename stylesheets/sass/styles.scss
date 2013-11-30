@@ -4,8 +4,20 @@ $visual-grid: true;
 @import 'neat/neat';
 
 
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: red;
+  border-bottom: 1px solid red;
+
+  &:hover {
+    color: maroon;
+    border-color: maroon;
+  }
+}
+
 body {
-  font-family: $georgia;
+  font: 100%/1.5 $georgia;
 }
 
 main {
@@ -43,5 +55,24 @@ section {
   }
   article {
     @include span-columns(9);
+  }
+}
+
+li {
+  color: blue;
+
+  &.alert {
+    color: red;
+  }
+  &.success {
+    color: green;
+  }
+}
+
+section.main p {
+  font-size: 18px;
+
+  body.store & {
+    font-size: 16px;
   }
 }

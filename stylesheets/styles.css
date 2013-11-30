@@ -23,8 +23,17 @@ body:before {
   pointer-events: none;
   z-index: -1; }
 
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: red;
+  border-bottom: 1px solid red; }
+  a:hover {
+    color: maroon;
+    border-color: maroon; }
+
 body {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
+  font: 100%/1.5 Georgia, Cambria, "Times New Roman", Times, serif; }
 
 main {
   *zoom: 1;
@@ -67,3 +76,15 @@ section article {
   width: 74.41059%; }
   section article:last-child {
     margin-right: 0; }
+
+li {
+  color: blue; }
+  li.alert {
+    color: red; }
+  li.success {
+    color: green; }
+
+section.main p {
+  font-size: 18px; }
+  body.store section.main p {
+    font-size: 16px; }
