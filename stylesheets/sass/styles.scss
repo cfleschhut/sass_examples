@@ -4,6 +4,13 @@ $visual-grid: true;
 @import 'neat/neat';
 
 
+$color-main: #333;      // black
+$color-light: #999;     // grey
+$color-accent: #ea4c89; // pink
+
+$font-sans: $helvetica;
+$font-serif: $georgia;
+
 a {
   font-weight: bold;
   text-decoration: none;
@@ -17,7 +24,8 @@ a {
 }
 
 body {
-  font: 100%/1.5 $georgia;
+  font: 100%/1.5 $font-serif;
+  color: $color-main;
 }
 
 main {
@@ -43,13 +51,15 @@ header[role="banner"] {
     line-height: 1;
     font: {
       size: 54px;
-      family: $helvetica;
+      family: $font-sans;
       weight: bold;
     }
   }
 }
 
 section {
+  @include clearfix;
+
   aside {
     @include span-columns(3);
   }
@@ -75,4 +85,8 @@ section.main p {
   body.store & {
     font-size: 16px;
   }
+}
+
+section.secondary {
+  background: lighten($color-accent, 30%);
 }
