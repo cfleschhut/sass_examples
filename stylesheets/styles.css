@@ -23,15 +23,6 @@ body:before {
   pointer-events: none;
   z-index: -1; }
 
-a {
-  font-weight: bold;
-  text-decoration: none;
-  color: red;
-  border-bottom: 1px solid red; }
-  a:hover {
-    color: maroon;
-    border-color: maroon; }
-
 body {
   font: 100%/1.5 Georgia, Cambria, "Times New Roman", Times, serif;
   color: #333333; }
@@ -62,9 +53,29 @@ header[role="banner"] {
     font-size: 54px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold; }
+  header[role="banner"] nav[role="navigation"] ul {
+    margin: 20px 0;
+    padding: 0; }
+  header[role="banner"] nav[role="navigation"] li {
+    margin: 0 10px 0 0;
+    display: inline-block; }
+    header[role="banner"] nav[role="navigation"] li a {
+      padding: 8px 20px;
+      color: #333333;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 5px; }
+    header[role="banner"] nav[role="navigation"] li.active a {
+      color: #fff;
+      background-color: #42b3e2;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #42b3e2), color-stop(100%, #1a6798));
+      background-image: -webkit-linear-gradient(#42b3e2, #1a6798);
+      background-image: linear-gradient(#42b3e2, #1a6798); }
 
 section {
-  *zoom: 1; }
+  *zoom: 1;
+  margin: 0 0 30px 0; }
   section:before, section:after {
     content: " ";
     display: table; }
@@ -84,13 +95,20 @@ section {
     width: 74.41059%; }
     section article:last-child {
       margin-right: 0; }
-
-li {
-  color: blue; }
-  li.alert {
-    color: red; }
-  li.success {
-    color: green; }
+  section a {
+    font-weight: bold;
+    text-decoration: none;
+    color: red;
+    border-bottom: 1px solid red; }
+    section a:hover {
+      color: maroon;
+      border-color: maroon; }
+  section li {
+    color: blue; }
+    section li.alert {
+      color: red; }
+    section li.success {
+      color: green; }
 
 section.main p {
   font-size: 18px; }
@@ -99,3 +117,20 @@ section.main p {
 
 section.secondary {
   background: #fad5e3; }
+
+section.main h4 {
+  margin: 0 0 20px 0;
+  font: bold 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #cc6633;
+  background: #eeeeee; }
+
+section.secondary h4 {
+  margin: 0 0 20px 0;
+  font: bold 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #3399cc;
+  background: #eeeeee; }
+
+.module {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); }
