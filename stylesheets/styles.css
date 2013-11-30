@@ -23,27 +23,47 @@ body:before {
   pointer-events: none;
   z-index: -1; }
 
-section {
+body {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
+
+main {
   *zoom: 1;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
-  section:before, section:after {
+  main:before, main:after {
     content: " ";
     display: table; }
-  section:after {
+  main:after {
     clear: both; }
-  section aside {
+
+header[role="banner"] {
+  margin: 20px 0 30px 0;
+  border-bottom: 4px solid #333; }
+  header[role="banner"] #logo {
     float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    section aside:last-child {
-      margin-right: 0; }
-  section article {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%; }
-    section article:last-child {
-      margin-right: 0; }
+    margin: 0 20px 0 0; }
+    header[role="banner"] #logo img {
+      display: block;
+      opacity: 0.95; }
+  header[role="banner"] h1 {
+    padding: 15px 0;
+    line-height: 1;
+    font-size: 54px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold; }
+
+section aside {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  section aside:last-child {
+    margin-right: 0; }
+section article {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  section article:last-child {
+    margin-right: 0; }

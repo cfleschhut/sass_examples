@@ -4,9 +4,40 @@ $visual-grid: true;
 @import 'neat/neat';
 
 
-section {
-  @include outer-container;
+body {
+  font-family: $georgia;
+}
 
+main {
+  @include outer-container;
+}
+
+header[role="banner"] {
+  margin: 20px 0 30px 0;
+  border-bottom: 4px solid #333;
+
+  #logo {
+    float: left;
+    margin: 0 20px 0 0;
+
+    img {
+      display: block;
+      opacity: 0.95;
+    }
+  }
+
+  h1 {
+    padding: 15px 0;
+    line-height: 1;
+    font: {
+      size: 54px;
+      family: $helvetica;
+      weight: bold;
+    }
+  }
+}
+
+section {
   aside {
     @include span-columns(3);
   }
