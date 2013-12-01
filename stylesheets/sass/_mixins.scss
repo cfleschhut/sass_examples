@@ -1,5 +1,4 @@
-@mixin title-style($color: #c63, $background: #eee) {
-  margin: 0 0 20px 0;
+@mixin title-style($color: $color-accent, $background: transparent) {
   font: bold 20px $font-sans;
   text-transform: uppercase;
   color: $color;
@@ -19,7 +18,7 @@
 }
 
 @mixin transition($property) {
-  transition: $property 0.2s ease;
+  transition: $property 0.15s ease;
 }
 
 @mixin box-sizing {

@@ -18,7 +18,7 @@ main {
 
 header[role="banner"] {
   margin: 0 0 30px 0;
-  border-bottom: 4px solid #333;
+  border-bottom: 4px solid $color-main;
 
   #logo {
     float: left;
@@ -62,7 +62,7 @@ header[role="banner"] {
       }
       &.active a {
         color: #fff;
-        @include linear-gradient(#42b3e2, #1a6798);
+        @include linear-gradient($color-links, darken($color-links, 20%));
       }
     }
   }
@@ -83,12 +83,13 @@ section {
     @include transition(color);
     font-weight: bold;
     text-decoration: none;
-    color: red;
-    border-bottom: 1px solid red;
+    color: $color-links;
+    border-bottom: 1px solid $color-links;
 
     &:hover {
-      color: maroon;
-      border-color: maroon;
+      $color: darken($color-links, 10%);
+      color: $color;
+      border-color: $color;
     }
   }
 
@@ -112,15 +113,11 @@ section.main p {
   }
 }
 
-section.secondary {
-  background: lighten($color-accent, 30%);
-}
-
 section.main h4 {
-  @include title-style(#c63);
+  @include title-style;
 }
 section.secondary h4 {
-  @include title-style(#39c, #eee);
+  @include title-style;
 }
 
 .module {
