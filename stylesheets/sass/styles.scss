@@ -92,17 +92,6 @@ section {
       border-color: $color;
     }
   }
-
-  li {
-    color: blue;
-
-    &.alert {
-      color: red;
-    }
-    &.success {
-      color: green;
-    }
-  }
 }
 
 section.main p {
@@ -126,4 +115,37 @@ section.secondary h4 {
   padding: 10px 20px;
   background: #eee;
   font-family: $monospace;
+}
+
+.alert {
+  margin: 0 0 15px 0;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  background: $color-accent;
+}
+.important {
+  font-weight: bold;
+}
+.alert-positive {
+  @extend .alert;
+  @extend .important;
+  background: $color-accent2;
+}
+
+%button {
+  padding: 10px;
+  font-weight: bold;
+  color: #fff;
+  background: $color-links;
+  border: none;
+  @include rounded(5px);
+}
+
+.buy {
+  @extend %button;
+}
+.submit {
+  @extend %button;
+  background: $color-accent2;
 }

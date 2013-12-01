@@ -105,12 +105,6 @@ section {
     section a:hover {
       color: #297aa3;
       border-color: #297aa3; }
-  section li {
-    color: blue; }
-    section li.alert {
-      color: red; }
-    section li.success {
-      color: green; }
 
 section.main p {
   font-size: 18px; }
@@ -135,3 +129,27 @@ section.secondary h4 {
   padding: 10px 20px;
   background: #eee;
   font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace; }
+
+.alert, .alert-positive {
+  margin: 0 0 15px 0;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  background: #ea4c89; }
+
+.important, .alert-positive {
+  font-weight: bold; }
+
+.alert-positive {
+  background: #99cc33; }
+
+.buy, .submit {
+  padding: 10px;
+  font-weight: bold;
+  color: #fff;
+  background: #3399cc;
+  border: none;
+  border-radius: 5px; }
+
+.submit {
+  background: #99cc33; }
