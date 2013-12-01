@@ -39,7 +39,7 @@ main {
     clear: both; }
 
 header[role="banner"] {
-  margin: 20px 0 30px 0;
+  margin: 0 0 30px 0;
   border-bottom: 4px solid #333; }
   header[role="banner"] #logo {
     float: left;
@@ -48,30 +48,31 @@ header[role="banner"] {
       display: block;
       opacity: 0.95; }
   header[role="banner"] h1 {
+    margin: 0;
     padding: 15px 0;
     line-height: 1;
-    font-size: 54px;
+    font-size: 45px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold; }
-  header[role="banner"] nav[role="navigation"] ul {
-    margin: 20px 0;
-    padding: 0; }
-  header[role="banner"] nav[role="navigation"] li {
-    margin: 0 10px 0 0;
-    display: inline-block; }
-    header[role="banner"] nav[role="navigation"] li a {
-      padding: 8px 20px;
-      color: #333333;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 5px; }
-    header[role="banner"] nav[role="navigation"] li.active a {
-      color: #fff;
-      background-color: #42b3e2;
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #42b3e2), color-stop(100%, #1a6798));
-      background-image: -webkit-linear-gradient(#42b3e2, #1a6798);
-      background-image: linear-gradient(#42b3e2, #1a6798); }
+  header[role="banner"] nav[role="navigation"] {
+    margin: 20px 0; }
+    header[role="banner"] nav[role="navigation"] ul {
+      margin: 0;
+      padding: 0; }
+    header[role="banner"] nav[role="navigation"] li {
+      margin: 0 10px 0 0;
+      display: inline-block; }
+      header[role="banner"] nav[role="navigation"] li a {
+        padding: 8px 20px;
+        color: #333333;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 5px; }
+      header[role="banner"] nav[role="navigation"] li.active a {
+        color: #fff;
+        background-color: #1a6798;
+        background-image: -webkit-linear-gradient(#42b3e2, #1a6798); }
 
 section {
   *zoom: 1;
@@ -96,6 +97,7 @@ section {
     section article:last-child {
       margin-right: 0; }
   section a {
+    transition: color 0.2s ease;
     font-weight: bold;
     text-decoration: none;
     color: red;
@@ -133,4 +135,8 @@ section.secondary h4 {
   background: #eeeeee; }
 
 .module {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); }
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+  padding: 10px 20px;
+  background: #eee;
+  font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace; }
