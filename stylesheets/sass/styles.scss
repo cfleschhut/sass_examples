@@ -15,15 +15,13 @@ body {
 main {
   @include outer-container;
 
-  @media screen and (max-width: $width-medium) {
+  @include responsive(wide-screens) {
     background: red;
   }
-
-  @media screen and (max-width: $width-small) {
-    background: green;
+  @include responsive(medium-screens) {
+    background: orange;
   }
-
-  @media #{$mobile-first} {
+  @include responsive(small-screens) {
     background: yellow;
   }
 }
