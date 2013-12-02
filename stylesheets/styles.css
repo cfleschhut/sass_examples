@@ -65,8 +65,12 @@ body {
   .container:after {
     clear: both; }
 
+img {
+  display: block;
+  max-width: 100%; }
+
 header[role="banner"] {
-  margin: 30px 0;
+  margin: 10px 0 30px 0;
   border-bottom: 4px solid #333333; }
   header[role="banner"] #logo {
     float: left;
@@ -124,7 +128,7 @@ section {
     float: left;
     display: block;
     margin-right: 2.12766%;
-    width: 23.40426%; }
+    width: 40.42553%; }
     section aside:last-child {
       margin-right: 0; }
     @media screen and (max-width: 760px) {
@@ -148,7 +152,7 @@ section {
     float: left;
     display: block;
     margin-right: 2.12766%;
-    width: 74.46809%; }
+    width: 57.44681%; }
     section article:last-child {
       margin-right: 0; }
     @media screen and (max-width: 760px) {
