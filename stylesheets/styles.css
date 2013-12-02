@@ -49,23 +49,24 @@ body:before {
 
 body {
   margin: 0;
-  padding: 10px;
+  padding: 0;
   font: 100%/1.5 Georgia, Cambria, "Times New Roman", Times, serif;
   color: #333333; }
 
-main {
+.container {
   *zoom: 1;
   max-width: 960px;
   margin-left: auto;
-  margin-right: auto; }
-  main:before, main:after {
+  margin-right: auto;
+  padding: 0 10px; }
+  .container:before, .container:after {
     content: " ";
     display: table; }
-  main:after {
+  .container:after {
     clear: both; }
 
 header[role="banner"] {
-  margin: 0 0 30px 0;
+  margin: 30px 0;
   border-bottom: 4px solid #333333; }
   header[role="banner"] #logo {
     float: left;
@@ -203,11 +204,16 @@ aside h4 {
   font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace; }
 
 .alert, .alert-positive {
-  margin: 0 0 15px 0;
-  padding: 15px;
-  text-align: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 40px;
   color: #fff;
-  background: #ea4c89; }
+  text-transform: uppercase;
+  font: 12px/40px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+  background: #ea4c89;
+  opacity: 0.85; }
 
 .important, .alert-positive {
   font-weight: bold; }
