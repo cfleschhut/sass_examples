@@ -14,6 +14,18 @@ body {
 
 main {
   @include outer-container;
+
+  @media screen and (max-width: $width-medium) {
+    background: red;
+  }
+
+  @media screen and (max-width: $width-small) {
+    background: green;
+  }
+
+  @media #{$mobile-first} {
+    background: yellow;
+  }
 }
 
 header[role="banner"] {
