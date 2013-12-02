@@ -1,6 +1,5 @@
-$visual-grid: true;
-
 @import 'bourbon/bourbon';
+@import 'grid-settings';
 @import 'neat/neat';
 
 @import 'reset';
@@ -8,6 +7,8 @@ $visual-grid: true;
 @import 'mixins';
 
 body {
+  margin: 0;
+  padding: 10px;
   font: 100%/1.5 $font-serif;
   color: $color-main;
 }
@@ -15,15 +16,15 @@ body {
 main {
   @include outer-container;
 
-  @include responsive(wide-screens) {
-    background: red;
-  }
-  @include responsive(medium-screens) {
-    background: orange;
-  }
-  @include responsive(small-screens) {
-    background: yellow;
-  }
+  // @include responsive(wide-screens) {
+  //   background: red;
+  // }
+  // @include responsive(medium-screens) {
+  //   background: orange;
+  // }
+  // @include responsive(small-screens) {
+  //   background: yellow;
+  // }
 }
 
 header[role="banner"] {
@@ -36,16 +37,16 @@ header[role="banner"] {
 
     img {
       display: block;
-      opacity: 0.95;
+      opacity: 0.5;
     }
   }
 
   h1 {
     margin: 0;
-    padding: 15px 0;
+    padding: 20px 0;
     line-height: 1;
     font: {
-      size: 45px;
+      size: 40px;
       family: $font-sans;
       weight: bold;
     }
@@ -69,10 +70,24 @@ header[role="banner"] {
         text-transform: uppercase;
         text-decoration: none;
         border-radius: 5px;
+
+        &:hover {
+          color: #fff;
+          background: $color-links;
+        }
       }
       &.active a {
         color: #fff;
-        @include linear-gradient($color-links, darken($color-links, 20%));
+        @include linear-gradient($color-links, darken($color-links, 10%));
+      }
+
+      @include media($mobile) {
+        margin: 0;
+        display: inline;
+        a {
+          display: block;
+          margin: 0 0 3px 0;
+        }
       }
     }
   }
@@ -83,10 +98,28 @@ section {
   margin: 0 0 30px 0;
 
   aside {
+    margin: 0 0 20px 0;
+
     @include span-columns(3);
+
+    @include media($tablet) {
+      @include span-columns(4);
+    }
+    @include media($mobile) {
+      @include span-columns(4);
+    }
   }
   article {
+    margin: 0 0 20px 0;
+
     @include span-columns(9);
+
+    @include media($tablet) {
+      @include span-columns(4);
+    }
+    @include media($mobile) {
+      @include span-columns(4);
+    }
   }
 
   a {
@@ -112,11 +145,11 @@ section.main p {
   }
 }
 
-section.main h4 {
+article h3 {
   @include title-style;
 }
-section.secondary h4 {
-  @include title-style;
+aside h4 {
+  @include title-style($color-light);
 }
 
 .module {
@@ -145,11 +178,18 @@ section.secondary h4 {
 
 %button {
   padding: 10px;
+  text-align: center;
   font-weight: bold;
   color: #fff;
   background: $color-links;
   border: none;
   @include rounded(5px);
+
+  @include media($mobile) {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
 }
 
 .buy {

@@ -10,11 +10,12 @@
   }
 }
 
-@mixin title-style($color: $color-accent, $background: transparent) {
-  font: bold 20px $font-sans;
-  text-transform: uppercase;
+@mixin title-style($color: $color-main, $background: transparent) {
   color: $color;
   background: $background;
+  margin: 0;
+  font: bold 16px $font-sans;
+  text-transform: uppercase;
 }
 
 @mixin rounded($radius) {
