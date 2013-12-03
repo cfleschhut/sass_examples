@@ -50,7 +50,7 @@ body:before {
 body {
   margin: 0;
   padding: 0;
-  font: 100%/1.5 Georgia, Cambria, "Times New Roman", Times, serif;
+  font: 300 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333333; }
 
 .container {
@@ -65,9 +65,12 @@ body {
   .container:after {
     clear: both; }
 
-img {
+.flex-img {
   display: block;
   max-width: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
 
 header[role="banner"] {
   margin: 10px 0 30px 0;
@@ -80,11 +83,12 @@ header[role="banner"] {
       opacity: 0.5; }
   header[role="banner"] h1 {
     margin: 0;
-    padding: 20px 0;
+    padding: 25px 0;
     line-height: 1;
-    font-size: 40px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold; }
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -2px; }
   header[role="banner"] nav[role="navigation"] {
     margin: 20px 0; }
     header[role="banner"] nav[role="navigation"] ul {
@@ -94,26 +98,34 @@ header[role="banner"] {
       margin: 0 10px 0 0;
       display: inline-block; }
       header[role="banner"] nav[role="navigation"] li a {
-        padding: 8px 20px;
+        padding: 10px 20px;
         color: #333333;
-        font-weight: bold;
+        font-size: 12px;
+        font-weight: 500;
         text-transform: uppercase;
         text-decoration: none;
-        border-radius: 5px; }
+        letter-spacing: 2px;
+        border-radius: 3px; }
         header[role="banner"] nav[role="navigation"] li a:hover {
           color: #fff;
-          background: #3399cc; }
+          background: #999999; }
       header[role="banner"] nav[role="navigation"] li.active a {
         color: #fff;
         background-color: #297aa3;
         background-image: -webkit-linear-gradient(#3399cc, #297aa3); }
-      @media screen and (max-width: 480px) {
-        header[role="banner"] nav[role="navigation"] li {
-          margin: 0;
-          display: inline; }
-          header[role="banner"] nav[role="navigation"] li a {
-            display: block;
-            margin: 0 0 3px 0; } }
+  @media screen and (max-width: 480px) {
+    header[role="banner"] {
+      text-align: center; }
+      header[role="banner"] #logo {
+        float: none; }
+        header[role="banner"] #logo img {
+          margin: 0 auto; }
+      header[role="banner"] nav[role="navigation"] li {
+        margin: 0;
+        display: inline; }
+        header[role="banner"] nav[role="navigation"] li a {
+          display: block;
+          margin: 0 0 3px 0; } }
 
 section {
   *zoom: 1;
@@ -173,7 +185,7 @@ section {
           margin-right: 0; } }
   section a {
     transition: color 0.15s ease;
-    font-weight: bold;
+    font-weight: 500;
     text-decoration: none;
     color: #3399cc;
     border-bottom: 1px solid #3399cc; }
@@ -191,14 +203,18 @@ article h3 {
   background: transparent;
   margin: 0;
   font: bold 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 22px;
+  text-transform: none; }
 
 aside h4 {
   color: #999999;
   background: transparent;
   margin: 0;
   font: bold 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2px; }
 
 .module {
   border-radius: 3px;
@@ -208,25 +224,26 @@ aside h4 {
   font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace; }
 
 .alert, .alert-positive {
+  width: 100%;
+  height: 35px;
   position: fixed;
   z-index: 1;
-  width: 100%;
-  height: 40px;
+  font: 12px/35px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
   text-transform: uppercase;
-  font: 12px/40px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
   letter-spacing: 2px;
   background: #ea4c89;
   opacity: 0.85; }
 
-.important, .alert-positive {
+.important, .alert, .alert-positive {
   font-weight: bold; }
 
 .alert-positive {
   background: #99cc33; }
 
 .buy, .submit {
-  padding: 10px;
+  padding: 10px 20px;
   text-align: center;
   font-weight: bold;
   color: #fff;
