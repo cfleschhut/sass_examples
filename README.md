@@ -4,7 +4,7 @@
 * Book: [Sass for Web Designers](http://www.abookapart.com/products/sass-for-web-designers)
 
 ## Getting started
-```
+```Bash
 bourbon install
 neat install
 
